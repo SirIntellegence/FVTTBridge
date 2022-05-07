@@ -1,274 +1,19 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
-  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+﻿<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
     <NoStdLib>true</NoStdLib>
-    <NuGetPackageImportStamp>
-    </NuGetPackageImportStamp>
+    <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
   </PropertyGroup>
   <PropertyGroup>
-    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
-    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{0B5A45F2-80C5-4455-BB8F-61DB60C14E79}</ProjectGuid>
     <OutputType>Library</OutputType>
-    <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>FVTTBridge</RootNamespace>
-    <AssemblyName>FVTTBridge</AssemblyName>
-    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
-    <FileAlignment>512</FileAlignment>
   </PropertyGroup>
-  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-    <DebugSymbols>true</DebugSymbols>
-    <DebugType>full</DebugType>
-    <Optimize>false</Optimize>
-    <OutputPath>bin\Debug\</OutputPath>
-    <DefineConstants>DEBUG;TRACE</DefineConstants>
-    <ErrorReport>prompt</ErrorReport>
-    <WarningLevel>4</WarningLevel>
-  </PropertyGroup>
-  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
-    <DebugType>pdbonly</DebugType>
-    <Optimize>true</Optimize>
-    <OutputPath>bin\Release\</OutputPath>
-    <DefineConstants>TRACE</DefineConstants>
-    <ErrorReport>prompt</ErrorReport>
-    <WarningLevel>4</WarningLevel>
-  </PropertyGroup>
-  <ItemGroup>
-    <Compile Include="ActorGlue.cs" />
-    <Compile Include="Bindings\ActorTokenHelpers.cs" />
-    <Compile Include="Bindings\AmbientSound.cs" />
-    <Compile Include="Bindings\AmbientLight.cs" />
-    <Compile Include="Bindings\ActorDirectory.cs" />
-    <Compile Include="Bindings\ActorSheet.cs" />
-    <Compile Include="Bindings\Actors.cs" />
-    <Compile Include="Bindings\Actor.cs" />
-    <Compile Include="ActorSheetGlue.cs" />
-    <Compile Include="Bindings\AmbientSoundConfig.cs" />
-    <Compile Include="Bindings\Application.cs" />
-    <Compile Include="Bindings\AudioHelper.cs" />
-    <Compile Include="Bindings\AutumnLeavesWeatherEffect.cs" />
-    <Compile Include="Bindings\AVConfig.cs" />
-    <Compile Include="Bindings\BackgroundLayer.cs" />
-    <Compile Include="Bindings\BaseEntitySheet.cs" />
-    <Compile Include="Bindings\BaseGrid.cs" />
-    <Compile Include="Bindings\BasePlaceableHUD.cs" />
-    <Compile Include="Bindings\CameraPopoutAppWrapper.cs" />
-    <Compile Include="Bindings\CameraViews.cs" />
-    <Compile Include="Bindings\Canvas.cs" />
-    <Compile Include="Bindings\CanvasAnimation.cs" />
-    <Compile Include="Bindings\CanvasLayer.cs" />
-    <Compile Include="Bindings\ChatBubbles.cs" />
-    <Compile Include="Bindings\ChatLog.cs" />
-    <Compile Include="Bindings\ClientSettings.cs" />
-    <Compile Include="Bindings\Combat.cs" />
-    <Compile Include="Bindings\CombatEncounters.cs" />
-    <Compile Include="Bindings\CombatTracker.cs" />
-    <Compile Include="Bindings\CombatTrackerConfig.cs" />
-    <Compile Include="Bindings\Compendium.cs" />
-    <Compile Include="Bindings\CompendiumDirectory.cs" />
-    <Compile Include="Bindings\ContextMenu.cs" />
-    <Compile Include="Bindings\ControlIcon.cs" />
-    <Compile Include="Bindings\ControlsLayer.cs" />
-    <Compile Include="Bindings\ControlsReference.cs" />
-    <Compile Include="Bindings\Cursor.cs" />
-    <Compile Include="Bindings\Dialog.cs" />
-    <Compile Include="Bindings\DicePool.cs" />
-    <Compile Include="Bindings\Die.cs" />
-    <Compile Include="Bindings\DoorControl.cs" />
-    <Compile Include="Bindings\DragDrop.cs" />
-    <Compile Include="Bindings\Draggable.cs" />
-    <Compile Include="Bindings\Drawing.cs" />
-    <Compile Include="Bindings\DrawingConfig.cs" />
-    <Compile Include="Bindings\DrawingHUD.cs" />
-    <Compile Include="Bindings\DrawingsLayer.cs" />
-    <Compile Include="Bindings\EasyRTCClient.cs" />
-    <Compile Include="Bindings\EffectsLayer.cs" />
-    <Compile Include="Bindings\Entity.cs" />
-    <Compile Include="Bindings\EntityCollection.cs" />
-    <Compile Include="Bindings\EntitySheetConfig.cs" />
-    <Compile Include="Bindings\EULA.cs" />
-    <Compile Include="Bindings\FateDie.cs" />
-    <Compile Include="Bindings\FilePicker.cs" />
-    <Compile Include="Bindings\Folder.cs" />
-    <Compile Include="Bindings\FolderConfig.cs" />
-    <Compile Include="Bindings\Folders.cs" />
-    <Compile Include="Bindings\FormApplication.cs" />
-    <Compile Include="Bindings\FrameViewer.cs" />
-    <Compile Include="Bindings\Game.cs" />
-    <Compile Include="Bindings\GridConfig.cs" />
-    <Compile Include="Bindings\GridHighLight.cs" />
-    <Compile Include="Bindings\GridLayer.cs" />
-    <Compile Include="Bindings\HeadsUpDisplay.cs" />
-    <Compile Include="Bindings\HexagonalGrid.cs" />
-    <Compile Include="Bindings\Hooks.cs" />
-    <Compile Include="Bindings\Hotbar.cs" />
-    <Compile Include="Bindings\ImagePopout.cs" />
-    <Compile Include="Bindings\InstallPackage.cs" />
-    <Compile Include="Bindings\InvitationLinks.cs" />
-    <Compile Include="Bindings\Item.cs" />
-    <Compile Include="Bindings\ItemDirectory.cs" />
-    <Compile Include="Bindings\Items.cs" />
-    <Compile Include="Bindings\ItemSheet.cs" />
-    <Compile Include="Bindings\Collection.cs" />
-    <Compile Include="Bindings\Journal.cs" />
-    <Compile Include="Bindings\JournalDirectory.cs" />
-    <Compile Include="Bindings\JournalEntry.cs" />
-    <Compile Include="Bindings\JournalSheet.cs" />
-    <Compile Include="Bindings\KeyboardManager.cs" />
-    <Compile Include="Bindings\LightConfig.cs" />
-    <Compile Include="Bindings\LightingLayer.cs" />
-    <Compile Include="Bindings\Localization.cs" />
-    <Compile Include="Bindings\Macro.cs" />
-    <Compile Include="Bindings\MacroConfig.cs" />
-    <Compile Include="Bindings\MacroDirectory.cs" />
-    <Compile Include="Bindings\Macros.cs" />
-    <Compile Include="Bindings\MainMenu.cs" />
-    <Compile Include="Bindings\MeasuredTemplate.cs" />
-    <Compile Include="Bindings\MeasuredTemplateConfig.cs" />
-    <Compile Include="Bindings\MersenneTwister.cs" />
-    <Compile Include="Bindings\Messages.cs" />
-    <Compile Include="Bindings\ModuleManagement.cs" />
-    <Compile Include="Bindings\MouseInteractionManager.cs" />
-    <Compile Include="Bindings\NormalizedRectangle.cs" />
-    <Compile Include="Bindings\Note.cs" />
-    <Compile Include="Bindings\NoteConfig.cs" />
-    <Compile Include="Bindings\NotesLayer.cs" />
-    <Compile Include="Bindings\Notifications.cs" />
-    <Compile Include="Bindings\Pause.cs" />
-    <Compile Include="Bindings\PermissionConfig.cs" />
-    <Compile Include="Bindings\PermissionControl.cs" />
-    <Compile Include="Bindings\PlayerConfig.cs" />
-    <Compile Include="Bindings\PlayerList.cs" />
-    <Compile Include="Bindings\Playlist.cs" />
-    <Compile Include="Bindings\PlaylistConfig.cs" />
-    <Compile Include="Bindings\PlaylistDirectory.cs" />
-    <Compile Include="Bindings\Playlists.cs" />
-    <Compile Include="Bindings\PlaylistSoundConfig.cs" />
-    <Compile Include="Bindings\RainWeatherEffect.cs" />
-    <Compile Include="Bindings\Ray.cs" />
-    <Compile Include="Bindings\ResizeHandle.cs" />
-    <Compile Include="Bindings\RollTable.cs" />
-    <Compile Include="Bindings\RollTableConfig.cs" />
-    <Compile Include="Bindings\RollTableDirectory.cs" />
-    <Compile Include="Bindings\RollTables.cs" />
-    <Compile Include="Bindings\Ruler.cs" />
-    <Compile Include="Bindings\Scene.cs" />
-    <Compile Include="Bindings\SceneConfig.cs" />
-    <Compile Include="Bindings\SceneControls.cs" />
-    <Compile Include="Bindings\SceneDirectory.cs" />
-    <Compile Include="Bindings\SceneNavigation.cs" />
-    <Compile Include="Bindings\Scenes.cs" />
-    <Compile Include="Bindings\Settings.cs" />
-    <Compile Include="Bindings\SettingsConfig.cs" />
-    <Compile Include="Bindings\SetupConfiguration.cs" />
-    <Compile Include="Bindings\SetupConfigurationForm.cs" />
-    <Compile Include="Bindings\Sidebar.cs" />
-    <Compile Include="Bindings\SidebarDirectory.cs" />
-    <Compile Include="Bindings\SidebarTab.cs" />
-    <Compile Include="Bindings\SightLayer.cs" />
-    <Compile Include="Bindings\SightLayerSource.cs" />
-    <Compile Include="Bindings\SnowWeatherEffect.cs" />
-    <Compile Include="Bindings\SocketInterface.cs" />
-    <Compile Include="Bindings\SortingHelpers.cs" />
-    <Compile Include="Bindings\SoundsLayer.cs" />
-    <Compile Include="Bindings\SpecialEffect.cs" />
-    <Compile Include="Bindings\SquareGrid.cs" />
-    <Compile Include="Bindings\Tabs.cs" />
-    <Compile Include="Bindings\TabsV2.cs" />
-    <Compile Include="Bindings\TemplateLayer.cs" />
-    <Compile Include="Bindings\TextEditor.cs" />
-    <Compile Include="Bindings\TextureLoader.cs" />
-    <Compile Include="Bindings\Tile.cs" />
-    <Compile Include="Bindings\TileConfig.cs" />
-    <Compile Include="Bindings\TileHUD.cs" />
-    <Compile Include="Bindings\TilesLayer.cs" />
-    <Compile Include="Bindings\Token.cs" />
-    <Compile Include="Bindings\TokenConfig.cs" />
-    <Compile Include="Bindings\TokenHUD.cs" />
-    <Compile Include="Bindings\TokenLayer.cs" />
-    <Compile Include="Bindings\UpdateNotes.cs" />
-    <Compile Include="Bindings\User.cs" />
-    <Compile Include="Bindings\UserManagement.cs" />
-    <Compile Include="Bindings\Users.cs" />
-    <Compile Include="Bindings\UserTargets.cs" />
-    <Compile Include="Bindings\VideoHelper.cs" />
-    <Compile Include="Bindings\Wall.cs" />
-    <Compile Include="Bindings\WallConfig.cs" />
-    <Compile Include="Bindings\WallsLayer.cs" />
-    <Compile Include="Bindings\WebRTC.cs" />
-    <Compile Include="Bindings\WebRTCInterface.cs" />
-    <Compile Include="Bindings\WebRTCSettings.cs" />
-    <Compile Include="Bindings\WorldConfig.cs" />
-    <Compile Include="Bindings\WorldSettingsStorage.cs" />
-    <Compile Include="BridgeActor.cs" />
-    <Compile Include="BridgeActorSheet.cs" />
-    <Compile Include="CombatEncounters.cs" />
-    <Compile Include="FoundryModule.cs" />
-    <Compile Include="GlobalSuppressions.cs" />
-    <Compile Include="Glue.cs" />
-    <Compile Include="HTML\Tabs.cs" />
-    <Compile Include="Bindings\PlaceableObject.cs" />
-    <Compile Include="Bindings\PlaceablesLayer.cs" />
-    <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="FoundrySystem.cs" />
-    <Compile Include="Bindings\ChatMessage.cs" />
-    <Compile Include="Bindings\Roll.cs" />
-  </ItemGroup>
   <ItemGroup>
     <None Include="..\.editorconfig">
       <Link>.editorconfig</Link>
     </None>
-    <None Include="bridge.json" />
-    <None Include="packages.config" />
-    <None Include="Resources\module.json">
+    <None Update="Resources\module.json">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
-  </ItemGroup>
-  <ItemGroup>
-    <Reference Include="Bridge, Version=17.10.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Bridge.Core.17.10.1\lib\net40\Bridge.dll</HintPath>
-    </Reference>
-    <Reference Include="Bridge.Html5, Version=17.10.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Bridge.Html5.17.10.0\lib\net40\Bridge.Html5.dll</HintPath>
-    </Reference>
-    <Reference Include="Bridge.jQuery2, Version=2.24.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Bridge.jQuery.2.24.0\lib\net40\Bridge.jQuery2.dll</HintPath>
-    </Reference>
-    <Reference Include="Newtonsoft.Json, Version=1.17.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Bridge.Newtonsoft.Json.1.17.0\lib\net40\Newtonsoft.Json.dll</HintPath>
-    </Reference>
-    <Reference Include="Retyped.Core, Version=1.6.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Retyped.Core.1.6.6733\lib\net40\Retyped.Core.dll</HintPath>
-    </Reference>
-    <Reference Include="Retyped.dom, Version=2.8.2.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Retyped.dom.2.8.6733\lib\net40\Retyped.dom.dll</HintPath>
-    </Reference>
-    <Reference Include="Retyped.es2015.collection, Version=2.8.2.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Retyped.es2015.collection.2.8.6733\lib\net40\Retyped.es2015.collection.dll</HintPath>
-    </Reference>
-    <Reference Include="Retyped.es2015.core, Version=2.8.2.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Retyped.es2015.core.2.8.6733\lib\net40\Retyped.es2015.core.dll</HintPath>
-    </Reference>
-    <Reference Include="Retyped.es2015.iterable, Version=2.8.2.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Retyped.es2015.iterable.2.8.6733\lib\net40\Retyped.es2015.iterable.dll</HintPath>
-    </Reference>
-    <Reference Include="Retyped.es2015.symbol, Version=2.8.2.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Retyped.es2015.symbol.2.8.6733\lib\net40\Retyped.es2015.symbol.dll</HintPath>
-    </Reference>
-    <Reference Include="Retyped.es5, Version=2.8.2.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Retyped.es5.2.8.6733\lib\net40\Retyped.es5.dll</HintPath>
-    </Reference>
-    <Reference Include="Retyped.howler, Version=2.0.5.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Retyped.howler.2.0.6733\lib\net40\Retyped.howler.dll</HintPath>
-    </Reference>
-    <Reference Include="Retyped.node, Version=9.6.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Retyped.node.9.6.6733\lib\net40\Retyped.node.dll</HintPath>
-    </Reference>
-    <Reference Include="Retyped.pixi.js, Version=4.7.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Retyped.pixi.js.4.7.6733\lib\net40\Retyped.pixi.js.dll</HintPath>
-    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Content Include="Resources\styles\simple.css">
@@ -278,14 +23,77 @@
   <ItemGroup>
     <Folder Include="Resources\module\" />
   </ItemGroup>
-  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
-  <Import Project="..\packages\Bridge.Min.17.10.1\build\Bridge.Min.targets" Condition="Exists('..\packages\Bridge.Min.17.10.1\build\Bridge.Min.targets')" />
-  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
-    <PropertyGroup>
-      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
-    </PropertyGroup>
-    <Error Condition="!Exists('..\packages\Bridge.Min.17.10.1\build\Bridge.Min.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Bridge.Min.17.10.1\build\Bridge.Min.targets'))" />
-  </Target>
+  <ItemGroup>
+    <PackageReference Include="Bridge" Version="17.10.1" />
+    <PackageReference Include="Bridge.Core" Version="17.10.1" />
+    <PackageReference Include="Bridge.Html5" Version="17.10.0" />
+    <PackageReference Include="Bridge.Html5.Console" Version="1.0.3" />
+    <PackageReference Include="Bridge.jQuery" Version="2.24.0" />
+    <PackageReference Include="Bridge.Min" Version="17.10.1" />
+    <PackageReference Include="Bridge.Newtonsoft.Json" Version="1.17.0" />
+    <PackageReference Include="Retyped.Core" Version="1.6.6733" />
+    <PackageReference Include="Retyped.dom" Version="2.8.6733" />
+    <PackageReference Include="Retyped.es2015.collection" Version="2.8.6733" />
+    <PackageReference Include="Retyped.es2015.core" Version="2.8.6733" />
+    <PackageReference Include="Retyped.es2015.iterable" Version="2.8.6733" />
+    <PackageReference Include="Retyped.es2015.symbol" Version="2.8.6733" />
+    <PackageReference Include="Retyped.es5" Version="2.8.6733" />
+    <PackageReference Include="Retyped.howler" Version="2.0.6733" />
+    <PackageReference Include="Retyped.node" Version="9.6.6733" />
+    <PackageReference Include="Retyped.pixi.js" Version="4.7.6733" />
+    <PackageReference Include="Microsoft.DotNet.UpgradeAssistant.Extensions.Default.Analyzers" Version="0.3.310801">
+      <PrivateAssets>all</PrivateAssets>
+    </PackageReference>
+    <PackageReference Include="Bridge.Html5.Console" Version="1.14.0" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Remove="HandWrittenBindings\Actor.cs" />
+    <Compile Remove="HandWrittenBindings\ActorDirectory.cs" />
+    <Compile Remove="HandWrittenBindings\Actors.cs" />
+    <Compile Remove="HandWrittenBindings\ActorSheet.cs" />
+    <Compile Remove="HandWrittenBindings\AmbientLight.cs" />
+    <Compile Remove="HandWrittenBindings\AmbientSound.cs" />
+    <Compile Remove="HandWrittenBindings\AmbientSoundConfig.cs" />
+    <Compile Remove="HandWrittenBindings\Application.cs" />
+    <Compile Remove="HandWrittenBindings\AudioHelper.cs" />
+    <Compile Remove="HandWrittenBindings\AutumnLeavesWeatherEffect.cs" />
+    <Compile Remove="HandWrittenBindings\AVConfig.cs" />
+    <Compile Remove="HandWrittenBindings\BackgroundLayer.cs" />
+    <Compile Remove="HandWrittenBindings\BaseEntitySheet.cs" />
+    <Compile Remove="HandWrittenBindings\BaseGrid.cs" />
+    <Compile Remove="HandWrittenBindings\BasePlaceableHUD.cs" />
+    <Compile Remove="HandWrittenBindings\CanvasLayer.cs" />
+    <Compile Remove="HandWrittenBindings\ChatBubbles.cs" />
+    <Compile Remove="HandWrittenBindings\ChatLog.cs" />
+    <Compile Remove="HandWrittenBindings\ChatMessage.cs" />
+    <Compile Remove="HandWrittenBindings\ClientSettings.cs" />
+    <Compile Remove="HandWrittenBindings\Collection.cs" />
+    <Compile Remove="HandWrittenBindings\Combat.cs" />
+    <Compile Remove="HandWrittenBindings\CombatTracker.cs" />
+    <Compile Remove="HandWrittenBindings\CombatTrackerConfig.cs" />
+    <Compile Remove="HandWrittenBindings\Compendium.cs" />
+    <Compile Remove="HandWrittenBindings\ControlIcon.cs" />
+    <Compile Remove="HandWrittenBindings\Entity.cs" />
+    <Compile Remove="HandWrittenBindings\EntityCollection.cs" />
+    <Compile Remove="HandWrittenBindings\Folder.cs" />
+    <Compile Remove="HandWrittenBindings\FormApplication.cs" />
+    <Compile Remove="HandWrittenBindings\GridHighLight.cs" />
+    <Compile Remove="HandWrittenBindings\Hooks.cs" />
+    <Compile Remove="HandWrittenBindings\Item.cs" />
+    <Compile Remove="HandWrittenBindings\ItemSheet.cs" />
+    <Compile Remove="HandWrittenBindings\Messages.cs" />
+    <Compile Remove="HandWrittenBindings\MouseInteractionManager.cs" />
+    <Compile Remove="HandWrittenBindings\PlaceableObject.cs" />
+    <Compile Remove="HandWrittenBindings\PlaceablesLayer.cs" />
+    <Compile Remove="HandWrittenBindings\Ray.cs" />
+    <Compile Remove="HandWrittenBindings\Roll.cs" />
+    <Compile Remove="HandWrittenBindings\Scene.cs" />
+    <Compile Remove="HandWrittenBindings\SidebarDirectory.cs" />
+    <Compile Remove="HandWrittenBindings\SidebarTab.cs" />
+    <Compile Remove="HandWrittenBindings\Socket.cs" />
+    <Compile Remove="HandWrittenBindings\Token.cs" />
+    <Compile Remove="HandWrittenBindings\User.cs" />
+  </ItemGroup>
   <PropertyGroup>
     <PostBuildEvent>rmdir /s  /q C:\Users\jeffp\AppData\Local\FoundryVTT\Data\modules\$(TargetName) &amp; C: &amp; mkdir "\Users\jeffp\AppData\Local\FoundryVTT\Data\modules\$(TargetName)" &amp;&amp;  mkdir "\Users\jeffp\AppData\Local\FoundryVTT\Data\modules\$(TargetName)\module"  &amp;&amp;  xcopy  "$(TargetDir)bridge" "\Users\jeffp\AppData\Local\FoundryVTT\Data\modules\$(TargetName)\module" /E &amp;&amp;  xcopy "$(TargetDir)Resources"  "\Users\jeffp\AppData\Local\FoundryVTT\Data\modules\$(TargetName)"  /E</PostBuildEvent>
   </PropertyGroup>
